@@ -8,7 +8,6 @@ export interface ChatMessage {
   text: string;
 }
 
-@Service()
 @Injectable({
   providedIn: 'root'
 })

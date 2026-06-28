@@ -1,0 +1,14 @@
+<div class="chat-container">
+  <h3>SSE Live Chat</h3>
+  
+  <div class="message-box">
+    <p *ngFor="let msg of messages">
+      <strong>{{ msg.user }}:</strong> {{ msg.text }}
+    </p>
+  </div>
+
+  <div class="input-area">
+    <input [(ngModel)]="currentMessage" (keyup.enter)="send()" placeholder="Type a message..." />
+    <button (click)="send()">Send</button>
+  </div>
+</div>
